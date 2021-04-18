@@ -367,6 +367,10 @@ h6 {
   border: none;
 }
 
+#submit-btn:hover {
+  cursor: pointer;
+}
+
 #contact-form {
   display: block;
   max-width: 600px;
@@ -398,6 +402,27 @@ h6 {
   font-size: 14px;
 }
 
+/* success message */
+.msg {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.success-msg {
+  width: 200px;
+  height: 50px;
+  background-color: #43aa8b;
+  margin: 20px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 100px;
+  right: 45px;
+  animation: slideInFromRight 0.5s ease-out;
+}
+
 /* animation */
 
 @keyframes slideInFromButtom {
@@ -407,6 +432,16 @@ h6 {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(30%);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -482,5 +517,9 @@ h6 {
 
   .about-wrapper {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .success-msg {
+    right: 15px;
   }
 }

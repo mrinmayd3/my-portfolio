@@ -40,6 +40,7 @@ function setTheme(mode) {
 
 // send 
 const form = document.querySelector('#contact-form');
+const successMsg = document.querySelector('#s-msg');
 
 form.addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -61,7 +62,7 @@ form.addEventListener('submit', async function (e) {
             },
         });
         const data = await res.json();
-        // console.log(data);
+        // console.log(data.msg);
 
         if (data.msg) {
             form.name.value = '';
@@ -70,7 +71,15 @@ form.addEventListener('submit', async function (e) {
             form.message.value = '';
 
             btn.innerHTML = '<i class="far fa-paper-plane"></i> Send';
+            successMsg.classList.add('success-msg');
+            successMsg.innerHTML = '<p><i class="far fa-check-circle"></i> Successfully Send</p>';
+
+            setTimeout(() => {
+                successMsg.classList.remove('success-msg');
+                successMsg.innerHTML = '';
+            }, 3000);
         }
+
     } catch (e) {
         console.log(e);
     }
