@@ -162,6 +162,10 @@
               <a target="_blank" href="https://github.com/mrinmayd3/yelpCamp"
                 >View code on <i class="fab fa-github"></i
               ></a>
+
+              <a target="_blank" href="https://github.com/mrinmayd3/yelpCamp"
+                >Live view <i class="fas fa-arrow-right"></i></i
+              ></a>
             </div>
           </div>
 
@@ -207,18 +211,61 @@
       <div class="main-container">
         <h3 style="text-align: center">Get in Touch</h3>
 
-        <form id="contact-form">
-          <label>Name</label>
-          <input class="input-field" type="text" name="name" required />
+        <form id="contact-form" novalidate>
+          <div class="form-control">
+            <label>Name</label>
+            <input
+              class="input-field"
+              id="name"
+              type="text"
+              name="name"
+              required
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Some error message</small>
+          </div>
 
-          <label>Subject</label>
-          <input class="input-field" type="text" name="subject" required />
+          <div class="form-control">
+            <label>Subject</label>
+            <input
+              class="input-field"
+              id="subject"
+              type="text"
+              name="subject"
+              required
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Some error message</small>
+          </div>
 
-          <label>Email</label>
-          <input class="input-field" type="email" name="email" required />
+          <div class="form-control">
+            <label>Email</label>
+            <input
+              class="input-field"
+              id="email"
+              type="email"
+              name="email"
+              required
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Some error message</small>
+          </div>
 
-          <label>Message</label>
-          <textarea class="input-field" name="message" required></textarea>
+          <div class="form-control">
+            <label>Message</label>
+            <textarea
+              class="input-field"
+              id="message"
+              name="message"
+              required
+            ></textarea>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Some error message</small>
+          </div>
 
           <button id="submit-btn">
             <i class="far fa-paper-plane"></i> Send

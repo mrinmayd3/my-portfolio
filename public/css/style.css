@@ -340,6 +340,10 @@ h6 {
   transform: translateY(-5px);
 }
 
+.p-preview > a:nth-child(4) {
+  float: right;
+}
+
 .p-preview {
   padding: 15px;
   /* background-color: #fff; */
@@ -383,7 +387,7 @@ h6 {
 }
 
 .input-field {
-  width: 100%;
+  width: 99%;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: var(--secondaryColor);
@@ -394,12 +398,55 @@ h6 {
 }
 
 #contact-form label {
+  display: block;
   line-height: 2.7em;
 }
 
 #contact-form textarea {
   min-height: 100px;
   font-size: 14px;
+}
+
+.form-control {
+  position: relative;
+}
+
+.form-control.success .input-field {
+  border-color: #2ecc71;
+}
+
+.form-control.error .input-field {
+  border-color: #e74e3c;
+}
+
+.form-control i {
+  visibility: hidden;
+  position: absolute;
+  top: 55px;
+  right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: #e74e3c;
+  visibility: visible;
+}
+
+.form-control small {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.form-control.error small {
+  position: relative;
+  color: #e74e3c;
+  visibility: visible;
 }
 
 /* success message */
