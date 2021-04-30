@@ -42,7 +42,6 @@ function setTheme(mode) {
 const form = document.querySelector('#contact-form');
 const successMsg = document.querySelector('#s-msg');
 
-
 const senderName = document.getElementById('name');
 const subject = document.getElementById('subject');
 const email = document.getElementById('email');
@@ -96,9 +95,14 @@ form.addEventListener('submit', async function (e) {
                 successMsg.innerHTML = '<p><i class="far fa-check-circle"></i> Successfully Send</p>';
 
                 setTimeout(() => {
+                    successMsg.classList.add('disappear');
+                }, 3000);
+
+                setTimeout(() => {
+                    successMsg.classList.remove('disappear');
                     successMsg.classList.remove('success-msg');
                     successMsg.innerHTML = '';
-                }, 3000);
+                }, 4000);
             }
 
         } catch (e) {

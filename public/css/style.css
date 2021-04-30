@@ -468,6 +468,12 @@ h6 {
   bottom: 100px;
   right: 45px;
   animation: slideInFromRight 0.5s ease-out;
+  transition: opacity 0.7s ease-in, transform 0.7s ease-in;
+}
+
+.disappear {
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 /* animation */
