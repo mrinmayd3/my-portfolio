@@ -29,7 +29,7 @@ h5,
 h6,
 strong {
   color: var(--mainText);
-  font-family: 'Russo One', sans-serif;
+  font-family: "Russo One", sans-serif;
   font-weight: 500;
 }
 
@@ -39,7 +39,7 @@ span,
 label,
 textarea {
   color: var(--secondaryText);
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 a {
@@ -109,8 +109,8 @@ h6 {
   grid-template-columns: 1fr 1fr;
   /* grid-template-rows: 3em 30em; */
   grid-template-areas:
-    'nav-wrapper nav-wrapper'
-    'left-column right-column';
+    "nav-wrapper nav-wrapper"
+    "left-column right-column";
 }
 
 .nav-wrapper {
@@ -471,6 +471,21 @@ h6 {
   transition: opacity 0.7s ease-in, transform 0.7s ease-in;
 }
 
+.error-msg {
+  width: 200px;
+
+  background-color: #e74e3c;
+  margin: 20px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 100px;
+  right: 45px;
+  animation: slideInFromRight 0.5s ease-out;
+  transition: opacity 0.7s ease-in, transform 0.7s ease-in;
+}
+
 .disappear {
   opacity: 0;
   transform: translateY(20px);
@@ -509,9 +524,9 @@ h6 {
   .intro-wrapper {
     grid-template-columns: 1fr;
     grid-template-areas:
-      'nav-wrapper'
-      'left-column'
-      'right-column';
+      "nav-wrapper"
+      "left-column"
+      "right-column";
   }
 
   .right-column {
